@@ -13,25 +13,6 @@
 
 <script>
 
-// 지도 종류를 바꾼다 위성지도 등    
-var map = new naver.maps.Map('map', {
-    center: new naver.maps.LatLng(37.3595704, 127.105399),
-    zoom: 15
-});
-
-var btns = $(".buttons > input");
-btns.on("click", function(e) {
-    e.preventDefault();
-
-    var mapTypeId = this.id;
-
-    if (map.getMapTypeId() !== naver.maps.MapTypeId[mapTypeId]) {
-        map.setMapTypeId(naver.maps.MapTypeId[mapTypeId]); // 지도 유형 변경하기
-
-        btns.removeClass("control-on");
-        $(this).addClass("control-on");
-    }
-});
     
 // 여기까지 지도 종류 바꾸기    
     
@@ -95,6 +76,22 @@ var map = new naver.maps.Map('map', {
     zoom: 10
 });
 
+var btns = $(".buttons > input");
+btns.on("click", function(e) {
+    e.preventDefault();
+
+    var mapTypeId = this.id;
+
+    if (map.getMapTypeId() !== naver.maps.MapTypeId[mapTypeId]) {
+        map.setMapTypeId(naver.maps.MapTypeId[mapTypeId]); // 지도 유형 변경하기
+
+        btns.removeClass("control-on");
+        $(this).addClass("control-on");
+    }
+});
+    
+    
+    
 var bounds = map.getBounds(),
     southWest = bounds.getSW(),
     northEast = bounds.getNE(),
