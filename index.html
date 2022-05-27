@@ -11,6 +11,36 @@
 
 <!-- 네이버 지도가 뿌려질 곳 !  -->
 <div id="map" style="width:100%;height:75vh; margin: 0 auto;"></div>
+	
+	
+ var mapOptions = {
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+            style: naver.maps.MapTypeControlStyle.BUTTON,
+            position: naver.maps.Position.TOP_RIGHT
+        },
+        zoomControl: true,
+        zoomControlOptions: {
+            style: naver.maps.ZoomControlStyle.SMALL,
+            position: naver.maps.Position.TOP_RIGHT
+        },
+        scaleControl: true,
+        scaleControlOptions: {
+            position: naver.maps.Position.RIGHT_CENTER
+        },
+        logoControl: true,
+        logoControlOptions: {
+            position: naver.maps.Position.TOP_LEFT
+        },
+        mapDataControl: true,
+        mapDataControlOptions: {
+            position: naver.maps.Position.BOTTOM_LEFT
+        }
+    };
+
+    
+    var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
+	
 
 
 </body>
