@@ -46,10 +46,10 @@ var HOME_PATH = window.HOME_PATH || '.';
 var MARKER_SPRITE_X_OFFSET = 29,
     MARKER_SPRITE_Y_OFFSET = 50,
     MARKER_SPRITE_POSITION = {
-        "안산": [0, 0],
-        "천안": [MARKER_SPRITE_X_OFFSET, 0],
-        "신도림": [MARKER_SPRITE_X_OFFSET*2, 0],
-        "세종": [MARKER_SPRITE_X_OFFSET*3, 0],
+        "안산": [0, 0, 37.3283859, 126.7952096],
+        "천안": [MARKER_SPRITE_X_OFFSET, 0, 36.7719121, 127.1318378],
+        "신도림": [MARKER_SPRITE_X_OFFSET*2, 0, 37.5083395, 126.8795062],
+        "세종": [MARKER_SPRITE_X_OFFSET*3, 0, 36.5320969 127.2575911],
 
     };
 
@@ -83,7 +83,7 @@ for (var key in MARKER_SPRITE_POSITION) {
     });
 
     var infoWindow = new naver.maps.InfoWindow({
-        content: '<div style="width:150px;text-align:center;padding:10px;">여기는 <b>"'+ key.substr(0, 1) +'"</b>.</div>'
+        content: '<div style="width:150px;text-align:center;padding:10px;">여기는 <b>"'+ key.substr(0, 3) +'"</b>.</div>'
     });
 
     markers.push(marker);
