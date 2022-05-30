@@ -44,13 +44,13 @@ var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
     
 var HOME_PATH = window.HOME_PATH || '.';
 
-var cityhall = new naver.maps.LatLng(36.7719121, 127.1318378),
+var chan = new naver.maps.LatLng(36.7719121, 127.1318378),
     marker = new naver.maps.Marker({
         map: map,
-        position: cityhall
+        position: chan
     });
 
-var contentString = [
+var chanString = [
         '<div class="iw_inner">',
         '   <h3>천안신방푸르지오</h3>',
         '   <p>천안시 동남구 통정9로 51 <br />',
@@ -59,7 +59,7 @@ var contentString = [
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
-    content: contentString
+    content: chanString
 });
 
 naver.maps.Event.addListener(marker, "click", function(e) {
