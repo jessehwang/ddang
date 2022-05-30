@@ -39,16 +39,12 @@
     };
 
     
-    var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
+var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
 
     
 var HOME_PATH = window.HOME_PATH || '.';
 
 var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147),
-    map = new naver.maps.Map('map', {
-        center: cityhall.destinationPoint(0, 500),
-        zoom: 15
-    }),
     marker = new naver.maps.Marker({
         map: map,
         position: cityhall
