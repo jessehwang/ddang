@@ -96,20 +96,20 @@ var ansanString = [
         '</div>'
     ].join('');
 
-var infowindow = new naver.maps.InfoWindow({
+var ansan_infowindow = new naver.maps.InfoWindow({
     content: ansanString
 });
     
     
 naver.maps.Event.addListener(ansan_marker, "click", function(e) {
-    if (infowindow.getMap()) {
-        infowindow.close();
+    if (ansan_infowindow.getMap()) {
+        ansan_infowindow.close();
     } else {
-        infowindow.open(map, ansan_marker);
+        ansan_infowindow.open(map, ansan_marker);
     }
 });
 
-infowindow.close(map, ansan_marker);    
+ansan_infowindow.close(map, ansan_marker);    
     
     
 
