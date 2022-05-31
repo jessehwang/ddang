@@ -88,7 +88,7 @@ var infowindow = new naver.maps.InfoWindow({
     
 // 서울 신도림----------------------------------------------------------------    
 var sindo = new naver.maps.LatLng(37.5083395, 126.8795062),
-    marker = new naver.maps.Marker({
+    sindo_marker = new naver.maps.Marker({
         map: map,
         position: sindo
     });
@@ -106,19 +106,15 @@ var infowindow = new naver.maps.InfoWindow({
     content: sindoString
 });        
     
-  
-    
-    
-    
-naver.maps.Event.addListener(marker, "click", function(e) {
+naver.maps.Event.addListener(sindo_marker, "click", function(e) {
     if (infowindow.getMap()) {
         infowindow.close();
     } else {
-        infowindow.open(map, marker);
+        infowindow.open(map, sindo_marker);
     }
 });
 
-infowindow.close(map, marker);
+infowindow.close(map, sindo_marker);
     
     
     </script>
