@@ -151,7 +151,42 @@ naver.maps.Event.addListener(sindo_marker, "click", function(e) {
 
 infowindow.close(map, sindo_marker);
     
+ 
+
+// 세종 세종자이더시티----------------------------------------------------------------    
+var xi_pos = new naver.maps.LatLng(36.5320969 127.2575911),
+    xi_marker = new naver.maps.Marker({
+        map: map,
+        position: xi_pos
+    });
+
+var xi_string = [
+        '<div class="iw_inner">',
+        '   <h3>세종자이더시티</h3>',
+        '   <p> 세종특별시 산울동 산32 <br />',
+        '   <a href="https://xi.co.kr" target="_blank">https://xi.co.kr/sejong/view?cmsMenuSeq=1647/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var xi_infowindow = new naver.maps.InfoWindow({
+    content: xi_string
+});        
     
+naver.maps.Event.addListener(xi_marker, "click", function(e) {
+    if (xi_infowindow.getMap()) {
+        xi_infowindow.close();
+    } else {
+        xi_infowindow.open(map, xi_marker);
+    }
+});
+
+xi_infowindow.close(map, xi_marker);
+
+    
+    
+    
+   
     </script>
 </body>
 </html>
