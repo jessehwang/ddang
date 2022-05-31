@@ -61,19 +61,19 @@ var chanString = [
         '</div>'
     ].join('');
 
-var infowindow = new naver.maps.InfoWindow({
+var chan_infowindow = new naver.maps.InfoWindow({
     content: chanString
 });
 
 naver.maps.Event.addListener(chan_marker, "click", function(e) {
-    if (infowindow.getMap()) {
-        infowindow.close();
+    if (chan_infowindow.getMap()) {
+        chan_infowindow.close();
     } else {
-        infowindow.open(map, chan_marker);
+        chan_infowindow.open(map, chan_marker);
     }
 });
 
-infowindow.close(map, chan_marker);
+chan_infowindow.close(map, chan_marker);
 
 
 
